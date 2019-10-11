@@ -7,11 +7,11 @@ def test_cli_option(testdir):
         def fixture_friends():
             return "🐸🐼🦊🦁🐨🐯🦊🦊🐻🐻🐻"
 
-        def test_slow(friends):
+        def test_friends(friends):
             assert f"Hello {friends}" == "Hello 🐸🐼🦊🦁🐨🐯🦊🦊🐻🐻🐻"
         """
     )
 
     result = testdir.runpytest("-v", "--turtle", "2.0")
-    result.stdout.fnmatch_lines(["*::test_slow*PASSED*"])
+    result.stdout.fnmatch_lines(["*::test_friends*PASSED*"])
     assert result.ret == 0
