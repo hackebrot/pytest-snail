@@ -1,4 +1,4 @@
-"""Plugin for adding markers to slow running tests."""
+"""Plugin for adding a marker to slow running tests."""
 
 from collections import defaultdict
 
@@ -6,7 +6,7 @@ import pytest
 
 
 class Turtle:
-    """Plugin for adding markers to slow running tests."""
+    """Plugin for adding a marker to slow running tests."""
 
     def __init__(self, config):
         """Initialize the plugin and load test durations from the cache."""

@@ -1,3 +1,3 @@
 # pytest-turtle
 
-Plugin for adding markers to slow running tests. 🐢
+Plugin for adding a marker to slow running tests. 🐢

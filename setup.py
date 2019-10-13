@@ -20,7 +20,7 @@ setuptools.setup(
         "Repository": "https://github.com/hackebrot/pytest-turtle",
         "Issues": "https://github.com/hackebrot/pytest-turtle/issues",
     },
-    description="Plugin for adding markers to slow running tests. 🐢",
+    description="Plugin for adding a marker to slow running tests. 🐢",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages("src"),
