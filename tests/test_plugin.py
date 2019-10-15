@@ -12,7 +12,7 @@ def test_cli_option(testdir):
         """
     )
 
-    result = testdir.runpytest("-v", "--turtle", "2.0")
+    result = testdir.runpytest("-v", "--snail", "2.0")
     result.stdout.fnmatch_lines(["*::test_friends*PASSED*"])
     assert result.ret == 0
 
@@ -40,11 +40,11 @@ def test_marker(testdir):
         """
         def pytest_collection_modifyitems(items, config):
             for item in items:
-                if item.get_closest_marker("turtle"):
-                    print(f"Found turtle marker on {item.name}")
+                if item.get_closest_marker("snail"):
+                    print(f"Found snail marker on {item.name}")
         """
     )
 
-    result2 = testdir.runpytest("-v", "--turtle", "0.5")
-    result2.stdout.fnmatch_lines(["*Found turtle marker on test_slow*"])
+    result2 = testdir.runpytest("-v", "--snail", "0.5")
+    result2.stdout.fnmatch_lines(["*Found snail marker on test_slow*"])
     assert result2.ret == 0

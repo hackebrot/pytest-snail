@@ -8,19 +8,19 @@ def read(*args):
 
 
 setuptools.setup(
-    name="pytest-turtle",
+    name="pytest-snail",
     version="0.1.0.dev1",
     author="Raphael Pierzina",
     author_email="raphael@hackebrot.de",
     maintainer="Raphael Pierzina",
     maintainer_email="raphael@hackebrot.de",
     license="MIT License",
-    url="https://github.com/hackebrot/pytest-turtle",
+    url="https://github.com/hackebrot/pytest-snail",
     project_urls={
-        "Repository": "https://github.com/hackebrot/pytest-turtle",
-        "Issues": "https://github.com/hackebrot/pytest-turtle/issues",
+        "Repository": "https://github.com/hackebrot/pytest-snail",
+        "Issues": "https://github.com/hackebrot/pytest-snail/issues",
     },
-    description="Plugin for adding a marker to slow running tests. 🐢",
+    description="Plugin for adding a marker to slow running tests. 🐌",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages("src"),
@@ -41,6 +41,6 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "License :: OSI Approved :: MIT License",
     ],
-    entry_points={"pytest11": ["turtle = pytest_turtle.plugin"]},
+    entry_points={"pytest11": ["snail = pytest_snail.plugin"]},
     keywords=["pytest"],
 )

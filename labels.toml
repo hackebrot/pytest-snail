@@ -1,6 +1,6 @@
 [bug]
 color = "ffeb95"
-description = "Bugs and problems with pytest-turtle"
+description = "Bugs and problems with pytest-snail"
 name = "bug"
 
 ["code quality"]
@@ -30,12 +30,12 @@ name = "docs"
 
 [enhancement]
 color = "82aaff"
-description = "New feature or enhancement for pytest-turtle"
+description = "New feature or enhancement for pytest-snail"
 name = "enhancement"
 
 ["good first issue"]
 color = "7fdbca"
-description = "Good tasks for newcomers to pytest-turtle"
+description = "Good tasks for newcomers to pytest-snail"
 name = "good first issue"
 
 [misc]
