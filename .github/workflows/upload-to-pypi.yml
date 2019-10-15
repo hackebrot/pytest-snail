@@ -1,0 +1,29 @@
+name: Upload to PyPI
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.6
+      env:
+        PYTHONDONTWRITEBYTECODE: TRUE
+        PYTHONUNBUFFERED: TRUE
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: pip install --upgrade --no-cache-dir wheel twine
+    - name: Package project
+      run: python setup.py sdist bdist_wheel
+    - name: Upload distributions
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        TWINE_REPOSITORY_URL: https://test.pypi.org/legacy/
+      run: twine upload dist/*
+
