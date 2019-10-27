@@ -23,7 +23,7 @@ class Snail:
         """Add the snail marker to slow running tests."""
         for item in items:
             duration = sum(self.durations[item.nodeid].values())
-            if duration > self.config.option.snail:
+            if duration >= self.config.option.snail:
                 item.add_marker(pytest.mark.snail)
 
     def pytest_sessionfinish(self, session):
