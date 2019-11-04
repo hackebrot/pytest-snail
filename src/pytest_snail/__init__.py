@@ -1,4 +1,4 @@
-__version__ = "0.1.0.rc1"
+__version__ = "0.1.0.rc2"
 __title__ = "pytest-snail"
 __description__ = "Plugin for adding a marker to slow running tests. 🐌"
 __url__ = "https://github.com/hackebrot/pytest-snail"
