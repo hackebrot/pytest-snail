@@ -9,7 +9,7 @@ def read(*args):
 
 setuptools.setup(
     name="pytest-snail",
-    version="0.1.0",
+    version="0.2.0.dev0",
     author="Raphael Pierzina",
     author_email="raphael@hackebrot.de",
     maintainer="Raphael Pierzina",
